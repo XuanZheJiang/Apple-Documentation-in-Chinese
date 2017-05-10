@@ -85,4 +85,4 @@
 |属性|描述|
 |:---|---|
 |Shadow Offset(阴影偏移量)|按钮阴影的偏移量和行为。阴影只影响标题字符串。**当按钮状态更改为或从高亮显示状态更改时，启用高亮显示选项来更改阴影的突出显示**<br>用纯代码方式配置偏移量，可以使用按钮[titleLabel](https://developer.apple.com/reference/uikit/uibutton/1623992-titlelabel)对象的[shadowOffset](https://developer.apple.com/reference/uikit/uilabel/1620528-shadowoffset)属性。配置高亮行为可以使用[reversesTitleShadowWhenHighlighted](https://developer.apple.com/reference/uikit/uibutton/1624004-reversestitleshadowwhenhighlight)属性。|
-|Drawing(绘图)|按钮的绘图行为。|
+|Drawing(绘图)|按钮的绘图行为。  |
