@@ -70,7 +70,7 @@
 **表1** 核心属性
 
 |属性|描述|
-|:---|---|
+|---|---|
 |Type(类型)|按钮类型。这个属性决定了许多其他按钮的默认设置。该属性不能在(runtime)运行时修改，但可以使用[buttonType](https://developer.apple.com/reference/uikit/uibutton/1624011-buttontype)来获取按钮的类型|
 |State Config(状态配置)|状态选择器。在这个状态配置中选择一个值后，按钮属性的更改将应用到指定状态。|
 |Title(标题)|按钮的标题。你可以将按钮的标题指定为普通字符串或带属性的字符串(attributed string)|
@@ -83,16 +83,17 @@
 **表2** 外观属性
 
 |属性|描述|
-|:---|---|
+|---|---|
 |Shadow Offset(阴影偏移量)|按钮阴影的偏移量和行为。阴影只影响标题字符串。在勾选了**Reverses on Highlight**选项时，当按钮状态更改为高亮或从高亮显示状态更改时，标题阴影会突出显示<br>用纯代码方式配置阴影偏移量，可以使用按钮[titleLabel](https://developer.apple.com/reference/uikit/uibutton/1623992-titlelabel)对象的[shadowOffset](https://developer.apple.com/reference/uikit/uilabel/1620528-shadowoffset)属性。配置高亮行为可以使用[reversesTitleShadowWhenHighlighted](https://developer.apple.com/reference/uikit/uibutton/1624004-reversestitleshadowwhenhighlight)属性。|
 |Drawing(绘图)|按钮的绘图行为。<br>开启[shows TouchWhenHighlighted](https://developer.apple.com/reference/uikit/uibutton/1623996-showstouchwhenhighlighted)选项后，当用户点击按钮时，在按钮上会增加一个白色光晕。<br>开启[adjusts ImageWhenHighlighted](https://developer.apple.com/reference/uikit/uibutton/1624031-adjustsimagewhenhighlighted)选项后，按钮图像在highlighted状态下会变暗。<br>开启[adjusts ImageWhenDisabled](https://developer.apple.com/reference/uikit/uibutton/1624020-adjustsimagewhendisabled)选项后，当按钮被禁用(disabled)时图像会变暗。|
-|Line Break(换行符)|按钮文本的换行选项。使用这个属性来定义按钮的标题是如何修改的，以适应可用的空间。|
+|Line Break(换行)|按钮文本的换行选项。使用这个属性来定义按钮的标题是如何换行或缩短的，以适应可用的空间。|
 
 表3列出了按钮的edge inset(边缘嵌入)属性。使用edge inset按钮可以改变按钮的矩形内容。
 
 **表3** 边缘嵌入属性
+
 |属性|描述|
-|:---|---|
+|---|---|
 |Edge(边缘)|配置边缘嵌入。你可以指定按钮整体内容的边缘，也可以分别指定按钮的标题或图像的边缘。|
 |Inset(嵌入)|边缘值。正值会收缩边缘靠近按钮中心，负值会扩大边缘远离按钮中心。在runtime(运行时)使用[contentEdgeInsets](https://developer.apple.com/reference/uikit/uibutton/1624036-contentedgeinsets)，[titleEdgeInsets](https://developer.apple.com/reference/uikit/uibutton/1624010-titleedgeinsets)和[imageEdgeInsets](https://developer.apple.com/reference/uikit/uibutton/1624034-imageedgeinsets)属性来获取这些边缘值。|
 
@@ -104,4 +105,8 @@
 
 当使用storyboard来构建界面时
 
-## 符号
+## 辅助功能(Accessibility)
+
+按钮默认是可用的。按钮的默认特性是启用的且可交互的。
+
+## 常用方法和属性(Symbols)
