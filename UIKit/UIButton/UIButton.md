@@ -103,10 +103,14 @@
 
 要国际化一个按钮，请为按钮的标题文本指定一个本地化的字符串。(你也可以指定适当的本地化图像)
 
-当使用storyboard来构建界面时
+当使用storyboard来构建界面时，使用Xcode的Base国际化功能配置本地化项目的支持。当你添加一个本地化,Xcode创建一个本地化的字符串文件。当使用纯代码时,使用系统的内置支持加载本地化字符串和资源。关于界面国际化的更多信息,请参阅[Internationalization and Localization Guide](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/Introduction/Introduction.html#//apple_ref/doc/uid/10000171i)(国际化和本地化向导)。
 
 ## 辅助功能(Accessibility)
 
 按钮默认是可用的。按钮的默认特性是启用的且可交互的。
 
 ## 常用方法和属性(Symbols)
+
+|Creating Buttons(创建按钮)|[init(type: UIButtonType)](https://developer.apple.com/reference/uikit/uibutton/1624028-init) <br> 创建并返回一个指定类型的新按钮。|
+|---|:---|
+|||
