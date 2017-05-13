@@ -113,4 +113,4 @@
 
 |Creating Buttons(创建按钮)|[init(type: UIButtonType)](https://developer.apple.com/reference/uikit/uibutton/1624028-init) <br> 创建并返回一个指定类型的新按钮。|
 |---|:---|
-|||
+|Configuring the Button Title(配置按钮标题)|var [titleLabel](https://developer.apple.com/reference/uikit/uibutton/1623992-titlelabel): UILabel? <br> 按钮上一个显示currentTitle(当前标题)属性的视图。|
