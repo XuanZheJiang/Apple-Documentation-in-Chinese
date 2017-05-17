@@ -8,12 +8,18 @@
 
 ### 视图管理应用程序的可视内容
 
-视图是[UIView](https://developer.apple.com/reference/uikit/uiview)类(或它的一个子类)的实例，并在应用程序窗口中管理一个矩形区域。视图负责绘制内容、处理多触摸事件和管理任何子视图的布局。绘图涉及到一些图像技术，例如Core Graphics，OpenGL ES，或UIKit。它们在视图的矩形区域中绘制图形，图像和文本。视图通过使用手势识别器( gesture recognizers)或直接处理触摸事件来对其矩形区域的触摸事件作出响应。在视图层级中，父视图负责定位和调整子视图，且可以动态调整。这种能够动态修改子视图的能力使你的视图能够适应不断变化的条件，例如界面的旋转和动画。
+视图是[UIView](https://developer.apple.com/reference/uikit/uiview)类(或它的一个子类)的实例，并在应用程序窗口中管理一个矩形区域。视图负责绘制内容、处理多触摸事件和管理任何子视图的布局。绘图涉及到一些图像技术，例如Core Graphics，OpenGL ES或UIKit。它们在视图的矩形区域中绘制图形、图像和文本。视图通过使用手势识别器( gesture recognizers)或直接处理触摸事件来对其矩形区域的触摸事件作出响应。在视图层级中，父视图负责定位和调整子视图，且可以动态调整。这种能够动态修改子视图的能力使你的视图能够适应不断变化的条件，例如界面的旋转和动画。
 
-你可以将视图看作构建用户界面的模块。你通常使用多个视图来构建视图的层级，而不是使用一个视图来显示所有内容。层级中的每个视图都呈现用户界面的特定部分，通常针对特定类型的内容进行优化。例如，UIKit专门用于呈现图像、文本和其他类型的内容。
+你可以将视图看作构建用户界面的模块。通常使用多个视图来构建视图的层级，而不是使用一个视图来显示所有内容。层级中的每个视图都呈现了用户界面的特定部分，通常会针对特定类型的内容进行优化。例如，UIKit专门用于呈现图像、文本和其他类型的内容。
 
 >相关章节：[View and Window Architecture](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html#//apple_ref/doc/uid/TP40009503-CH2-SW1)，[Views](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html#//apple_ref/doc/uid/TP40009503-CH5-SW1)
 
 ### 窗口协调视图的显示
 
 窗口是[UIWindow](https://developer.apple.com/reference/uikit/uiwindow)类的一个实例，它可以处理应用程序用户界面的整体表现。Windows与Views(视图)来配合管理交互、变化以及视图的可见层级。在大多数情况下，应用程序的窗口不会发生变化。窗口被创建出来后，他将保持不变，直至显示的视图发生改变。每个应用程序都至少有一个窗口用来在设备的主屏幕上显示应用程序的用户界面。如果一个外接显示器连接到设备上，应用程序可以创建第二个窗口来显示该屏幕上的内容。
+
+>相关章节：[Windows](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingWindows/CreatingWindows.html#//apple_ref/doc/uid/TP40009503-CH4-SW1)
+
+### 动画为用户提供了界面变化的可见反馈
+
+动画为用户提供关于视图层次结构变化的可见反馈。系统定义了标准的动画，用于表示模态视图(presenting modal views)和不同视图组之间的转换
