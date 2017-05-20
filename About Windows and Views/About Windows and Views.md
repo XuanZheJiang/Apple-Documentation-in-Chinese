@@ -1,4 +1,4 @@
-# [About Windows and Views](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/Introduction/Introduction.html)
+# [About Windows and Views (关于窗口和视图)](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/Introduction/Introduction.html)
 
 在iOS中，可以使用Windows(窗口)和Views(视图)在屏幕上显示应用程序的内容。虽然窗口没有任何可见的内容，但是为应用程序的视图提供了一个基本的容器。视图定义了填充窗口的部分内容。例如，你可能会看到用来显示图像、文本、形状或其中一些组合的视图。你还可以使用视图来组织和管理其他视图。
 
