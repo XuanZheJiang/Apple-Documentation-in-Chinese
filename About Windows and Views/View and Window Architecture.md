@@ -6,8 +6,10 @@
 
 ## 视图架构基础 (View Architecture Fundamentals)
 
-你想完成大部分可视内容的时候，都是使用视图对象([UIView](https://developer.apple.com/reference/uikit/uiview)类的实例)来完成的。一个视图对象在屏幕上定义了一个矩形区域来处理绘图和触摸事件。一个视图也可以作为其他视图的父视图且可以调整其子视图的位置和大小。UIView类的大部分工作都在管理这些视图之间的关系,但是你也可以根据需要自定义默认的行为。
+你想完成大部分可视内容的时候，都是使用视图对象([UIView](https://developer.apple.com/reference/uikit/uiview)类的实例)来完成的。一个视图对象在屏幕上定义了一个矩形区域来处理绘图和触摸事件。一个视图也可以作为其他视图的父视图且可以调整其子视图的位置和大小。<font color=#888>UIView</font>类的大部分工作都在管理这些视图之间的关系,但是你也可以根据需要自定义默认的行为。
 
-视图与核心动画层(Core Animation Layer)一起协同工作，以处理视图内容的渲染和动画。UIKit中的每个视图都有一个层(通常是CALayer类的实例)对象，它
+视图与核心动画层(Core Animation Layer)一起协同工作，以处理视图内容的渲染和动画。UIKit中的每个视图都有一个层(通常是CALayer类的实例)对象，它为视图提供存储支持并处理与视图相关的动画。你应该通过<font color=#888>UIView</font>来处理大多数的操作。但是，在你需要对视图的渲染或动画行为进行更多控制的情况下，您可以通过它的layer(层)来执行操作。
+
+要理解视图和层之间的关系，可以查看一个示例。
 
 <img src=Images/view-layer-store.jpg>
