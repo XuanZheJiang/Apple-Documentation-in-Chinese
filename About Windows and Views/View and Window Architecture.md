@@ -10,6 +10,7 @@
 
 视图与核心动画层(Core Animation Layer)一起协同工作，以处理视图内容的渲染和动画。UIKit中的每个视图都有一个层(通常是CALayer类的实例)对象，它为视图提供存储支持并处理与视图相关的动画。你应该通过<font color=#888>UIView</font>来处理大多数的操作。但是，在你需要对视图的渲染或动画行为进行更多控制的情况下，您可以通过它的layer(层)来执行操作。
 
-要理解视图和层之间的关系，可以查看一个示例。
+要理解视图和层之间的关系，可以查看一个示例。如图1-1
+显示来自视图转场([ViewTransitions](https://developer.apple.com/library/content/samplecode/ViewTransitions/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007411))示例应用程序的视图体系结构以及与底层核心动画层的关系。图1-1 中的应用程序包括一个窗口(Window)(也是一个视图)一个通用的<font color=#888>UIView</font>对象，它充当一个容器视图，一个图像视图(image view)，一个用于显示控件的工具栏(toolbar)和一个工具栏按钮(bar button item)(按钮本身不是一个视图，而是管理其内部的视图)。
 
 <img src=Images/view-layer-store.jpg>
