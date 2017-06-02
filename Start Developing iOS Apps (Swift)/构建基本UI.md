@@ -1,0 +1,96 @@
+# 构建基本UI (Build a Basic UI)
+
+本课程让你熟悉Xcode，它是编写apps的工具。你将熟悉Xcode中的项目结构，学习如何在基本的项目控件之间导航和使用这些控件。在课程中，你将构建一个[用户界面(UI)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW18)简单的**FoodTracker** app并且在模拟器上运行。完成后，你的app如下图所示：
+
+<img src=Images/BBUI_sim_finalUI_2x.png width=387px>
+
+## 学习目标
+
+在课程结束时，你将能够：  
+
+* 在Xcode中创建项目
+* 使用Xcode项目模版来创建一些关键的文件
+* 打开项目且在文件之间切换
+* 在模拟器上运行app
+* 在storyboard中添加、移动和调整UI元素
+* 使用属性检查器编辑UI元素的属性
+* 在树形控件视图(outline view)中查看和排列UI元素
+* 使用助手编辑器(Assistant editor)预览storyboard UI
+* 使用自动布局(Auto Layout)来布置自动适应用户设备尺寸的用户界面
+
+## 创建新项目
+
+Xcode包含几个内置的app模版，用于开发常见类型的iOS app。例如游戏、基于标签的导航app和基于表视图的app。这些模版都具有预配置的界面和代码文件。本课中，你将从最基本的模版开始：单视图应用(Single View Application)
+
+#### 创建新项目
+
+1. 从/Applications目录打开Xcode。  
+如果这是你第一次启动Xcode，它可能会要求你同意用户协议且下载一些其他组件。允许这些提示直到Xcode完全设置好并准备启动。  
+一旦Xcode启动，便会呈现欢迎窗口。
+<img src=Images/BBUI_welcomewindow_2x.png width=680px>
+
+如果出现的是项目窗口而不是欢迎窗口，不要担心，因为你可能以前创建或打开过项目。只需要在下一步中使用菜单项创建项目即可。  
+2. 在欢迎窗口中，点击“Create a new Xcode project” (或 choose File > New > Project)  
+Xcode会打开一个新窗口并显示对话框，你可以选择一个模版。
+3. 选择对话框顶部的iOS选项卡。  
+4. 在Application部分中，选择Single View Application之后点击Next。
+<img src=Images/BBUI_singleviewapp_template_2x.png width=680px>
+5. 在显示的对话框中，使用以下值为你的app命名并选择其他额外选项：
+
+* Product Name(产品名称): **FoodTracker**  
+Xcode使用你输入的产品名称来命名你的产品和app。
+* Team(团队)：如果这项没有自动填充，则选择None即可。
+* Organization Name(组织名称)：组织的名称或自己的名称，此项可留空。
+* Organization Identifier(组织标识符)：你组织的标识符。如果没有可以用**com.example**
+* Bundle Identifier(捆绑标识符)：此值根据你的组织名称和组织标识符自动生成。
+* Language(语言)：Swift
+* Devices(设备)：通用
+运行在iPhone和iPad上的通用app。
+* Use Core Data(使用核心数据库)：未选择。
+* Include Unit Tests(包含单元测试)：选择.
+* Include UI Tests(包含UI测试)：未选择。
+<img src=Images/BBUI_newproject_2x.png width=680px>
+
+6 . 点击Next。  
+7 . 在出现的对话框中，选择要保存项目的位置并点击Create。
+Xcode在[workspace window](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW9)(工作窗口)中打开了新的项目。
+<img src=Images/BBUI_workspacewindow_2x.png width=680px>
+
+在工作窗口中，你可能会看到一个警告⚠️图标并显示一条信息：“Signing for FoodTracker requires a development team.”此警告表示你尚未设置开发团队，但不要担心，忽略这条警告也可以完成本课。你无需一个开发团队也可以在模拟器中运行app。
+
+>进一步探索  
+>**在iOS设备上运行app之前，你需要一个有效的小组以便对app进行签名。如果你是个体或苹果开发者计划的成员，你可以在此选择该小组。否则，你的Apple ID会分配给个人小组来启动设备上的app。然而，在你要提交app到App Store前，需要加入苹果开发者计划**
+>**了解更多信息，请点击 Help 在搜索栏键入“Signing workflow.”**
+
+## 熟悉Xcode
+
+Xcode包含了创建一个app所需的一切。它组织了创建app的所有文件和资源。它为代码和用户界面提供了一些编辑器。并且，Xcode允许你构建、运行和调试你的app，且为模拟器和iOS设备提供了强大的调试器。  
+花一点时间去熟悉Xcode工作区的主要部分。在整个课程中，你将使用下面窗口的区域。不要被这么多功能吓到，每个区域在需要使用的时候会有详细的说明。
+<img src=Images/BBUI_workspacewindow_callouts_2x.png width=680px>
+
+## 运行iOS模拟器
+
+因为你的项目基于Xcode模版，所以会自动为你设置好基本的应用程序环境。虽然你没有写任何代码，但是可以直接编译和运行单视图应用程序模版而无需其他配置。  
+在Xcode里的iOS模拟器上编译并运行你的app。模拟器为你展现了你的app在真机设备上如何呈现页面外观和运行。  
+模拟器可以模拟一些不同类型的硬件设备，包括所有屏幕尺寸和分辨率的iPad和iPhone。所以，你可以在每一个模拟设备上进行开发你的app。在本课中，使用iPhone7模拟器。
+
+#### 在模拟器中运行你的app
+
+1. 在Xcode工具栏的Scheme弹出菜单中选择iPhone7。  
+Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确保你选的是iPhone7模拟器，而不是iOS设备。
+<img src=Images/BBUI_schememenu_2x.png width=421px>
+
+2. 点击位于Xcode工具条的左上角的Run按钮。
+<img src=Images/BBUI_toolbar_2x.png width=680px>
+
+或者选择 Product > Run (或按 Command + R)  
+如果你第一次运行app，Xcode会询问你是否在Mac上启用开发者模式。开发者模式允许Xcode使用某些调试功能，而无需每次都输入密码。现在，根据提示决定是否启用开发者模式。
+<img src=Images/BBUI_developermode_2x.png width=464px>
+
+如果你不启用开发者模式，稍后可能会要求你输入密码。这些课程假设你已经启用了开发者模式。  
+3. 随着编译进度的完成，观察Xcode工具条。  
+在工具条的中间显示了编译进度的信息[activity viewer](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW24)。
+
+在Xcode编译完成后，模拟器会自动启动。第一次启动模拟器可能要稍等片刻。  
+在iPhone模拟器中启动你的app。起初，模拟器显示app的启动页面，随后转入主页面。在没有修改单视图程序模版的情况下，启动页面和主页面是相同的。
+<img src=Images/BBUI_sim_blank_2x.png width=387px>
