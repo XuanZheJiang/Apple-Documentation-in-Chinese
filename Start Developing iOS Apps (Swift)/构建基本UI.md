@@ -1,4 +1,4 @@
-# 构建基本UI (Build a Basic UI)
+# [构建基本UI (Build a Basic UI)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
 
 本课程让你熟悉Xcode，它是编写apps的工具。你将熟悉Xcode中的项目结构，学习如何在基本的项目控件之间导航和使用这些控件。在课程中，你将构建一个[用户界面(UI)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW18)简单的**FoodTracker** app并且在模拟器上运行。完成后，你的app如下图所示：
 
@@ -18,7 +18,7 @@
 * 使用助手编辑器(Assistant editor)预览storyboard UI
 * 使用自动布局(Auto Layout)来布置自动适应用户设备尺寸的用户界面
 
-## 创建新项目
+## 创建新项目 (Create a New Project)
 
 Xcode包含几个内置的app模版，用于开发常见类型的iOS app。例如游戏、基于标签的导航app和基于表视图的app。这些模版都具有预配置的界面和代码文件。本课中，你将从最基本的模版开始：单视图应用(Single View Application)
 
@@ -62,13 +62,13 @@ Xcode在[workspace window](https://developer.apple.com/library/content/reference
 >**在iOS设备上运行app之前，你需要一个有效的小组以便对app进行签名。如果你是个体或苹果开发者计划的成员，你可以在此选择该小组。否则，你的Apple ID会分配给个人小组来启动设备上的app。然而，在你要提交app到App Store前，需要加入苹果开发者计划**
 >**了解更多信息，请点击 Help 在搜索栏键入“Signing workflow.”**
 
-## 熟悉Xcode
+## 熟悉Xcode (Get Familiar with Xcode)
 
 Xcode包含了创建一个app所需的一切。它组织了创建app的所有文件和资源。它为代码和用户界面提供了一些编辑器。并且，Xcode允许你构建、运行和调试你的app，且为模拟器和iOS设备提供了强大的调试器。  
 花一点时间去熟悉Xcode工作区的主要部分。在整个课程中，你将使用下面窗口的区域。不要被这么多功能吓到，每个区域在需要使用的时候会有详细的说明。
 <img src=Images/BBUI_workspacewindow_callouts_2x.png width=680px>
 
-## 运行iOS模拟器
+## 运行iOS模拟器 (Run iOS Simulator)
 
 因为你的项目基于Xcode模版，所以会自动为你设置好基本的应用程序环境。虽然你没有写任何代码，但是可以直接编译和运行单视图应用程序模版而无需其他配置。  
 在Xcode里的iOS模拟器上编译并运行你的app。模拟器为你展现了你的app在真机设备上如何呈现页面外观和运行。  
@@ -94,3 +94,8 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 在Xcode编译完成后，模拟器会自动启动。第一次启动模拟器可能要稍等片刻。  
 在iPhone模拟器中启动你的app。起初，模拟器显示app的启动页面，随后转入主页面。在没有修改单视图程序模版的情况下，启动页面和主页面是相同的。
 <img src=Images/BBUI_sim_blank_2x.png width=387px>
+
+现在，单视图模版只是显示了白色屏幕，而其他模版具有更复杂的行为表现。在开发自己的app之前，了解每个模版的用途是十分重要的。不要修改模版，直接在模拟器中运行你的app，这是理解模版用途的好方法。
+
+通过选择Simulator > Quit Simulator(或按Command-Q)退出模拟器。
+
