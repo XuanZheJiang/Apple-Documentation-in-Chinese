@@ -4,7 +4,7 @@
 
 <img src=Images/BBUI_sim_finalUI_2x.png width=387px>
 
-## 学习目标
+## <font color=#888>学习目标 (Learning Objectives)</font>
 
 在课程结束时，你将能够：  
 
@@ -18,7 +18,7 @@
 * 使用助手编辑器(Assistant editor)预览storyboard UI
 * 使用自动布局(Auto Layout)来布置自动适应用户设备尺寸的用户界面
 
-## 创建新项目 (Create a New Project)
+## <font color=#888>创建新项目 (Create a New Project)</font>
 
 Xcode包含几个内置的app模版，用于开发常见类型的iOS app。例如游戏、基于标签的导航app和基于表视图的app。这些模版都具有预配置的界面和代码文件。本课中，你将从最基本的模版开始：单视图应用(Single View Application)
 
@@ -62,13 +62,13 @@ Xcode在[workspace window](https://developer.apple.com/library/content/reference
 >**在iOS设备上运行app之前，你需要一个有效的小组以便对app进行签名。如果你是个体或苹果开发者计划的成员，你可以在此选择该小组。否则，你的Apple ID会分配给个人小组来启动设备上的app。然而，在你要提交app到App Store前，需要加入苹果开发者计划**
 >**了解更多信息，请点击 Help 在搜索栏键入“Signing workflow.”**
 
-## 熟悉Xcode (Get Familiar with Xcode)
+## <font color=#888>熟悉Xcode (Get Familiar with Xcode)</font>
 
 Xcode包含了创建一个app所需的一切。它组织了创建app的所有文件和资源。它为代码和用户界面提供了一些编辑器。并且，Xcode允许你构建、运行和调试你的app，且为模拟器和iOS设备提供了强大的调试器。  
 花一点时间去熟悉Xcode工作区的主要部分。在整个课程中，你将使用下面窗口的区域。不要被这么多功能吓到，每个区域在需要使用的时候会有详细的说明。
 <img src=Images/BBUI_workspacewindow_callouts_2x.png width=680px>
 
-## 运行iOS模拟器 (Run iOS Simulator)
+## <font color=#888>运行iOS模拟器 (Run iOS Simulator)</font>
 
 因为你的项目基于Xcode模版，所以会自动为你设置好基本的应用程序环境。虽然你没有写任何代码，但是可以直接编译和运行单视图应用程序模版而无需其他配置。  
 在Xcode里的iOS模拟器上编译并运行你的app。模拟器为你展现了你的app在真机设备上如何呈现页面外观和运行。  
@@ -99,3 +99,18 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 
 通过选择Simulator > Quit Simulator(或按Command-Q)退出模拟器。
 
+## <font color=#888>查看源代码 (Review the Source Code)</font>
+
+单视图模版包含几个设置应用程序环境的源代码文件。首先，来看看 <font color=#888>AppDelegate.swift</font> 这个文件。
+
+#### 查看AppDelegate.swift源文件
+
+1. 确保项目导航器在导航器区域中打开。<br/>[项目导航器(Project navigator)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW57)显示了项目的所有文件。如果项目导航器未打开，请点击导航选择器最左侧的按钮。(或者，选择 View > Navigators > Show Project Navigator)<br/><img src=Images/BBUI_projectnavigator_2x.png width=478px>
+2. 如有必要，通过点击项目导航器中的FoodTracker文件夹旁边的小三角来打开它。
+3. 选择<font color=#888>AppDelegate.swift</font> 文件。<br/>Xcode在窗口主编辑区打开该源文件。<br/><img src=Images/BBUI_appdelegate_file_2x.png width=680px><br/>或者，双击<font color=#888>AppDelegate.swift</font>在一个单独的窗口中打开它。
+
+### 应用程序代理源文件
+
+<font color=#888>AppDelegate.swift</font> 源文件有2个主要功能：
+
+* 在源文件中定义了<font color=#888>AppDelegate</font>类。
