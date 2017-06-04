@@ -113,4 +113,5 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 
 <font color=#888>AppDelegate.swift</font> 源文件有2个主要功能：
 
-* 在源文件中定义了<font color=#888>AppDelegate</font>类。
+* 在源文件中定义了<font color=#888>AppDelegate</font>类。应用程序代理([app delegate](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW27))创建了窗口，该窗口中绘制了应用程序的内容，且提供了应用程序状态转换的场所。
+* 它为您的应用程序创建入口([entry point](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW37))，并为您的应用程序提供输入事件的运行循环([run loop](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW61))。这项工作是由<font color=#888>UIApplicationMain</font>属性(<font color=#888>@UIApplicationMain</font>)来完成的。该属性出现在文件的顶部。
