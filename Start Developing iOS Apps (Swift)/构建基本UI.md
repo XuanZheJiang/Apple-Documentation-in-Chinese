@@ -116,4 +116,25 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 * 定义了<font color=#888>AppDelegate</font>类。应用程序代理([app delegate](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW27))创建了窗口，该窗口中绘制了应用程序的内容，且提供了应用程序状态转换的场所。
 * 为您的应用程序创建入口([entry point](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW37))，并为您的应用程序提供输入事件的运行循环([run loop](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW61))。这项工作是由<font color=#888>UIApplicationMain</font>属性(<font color=#888>@UIApplicationMain</font>)来完成的。该属性出现在文件的顶部。使用<font color=#888>UIApplicationMain</font>属性等同于调用<font color=#888>UIApplicationMain</font>函数，并将<font color=#888>AppDelegate</font>类的名称作为代理类的名称传递。作为响应，系统创建一个应用程序对象([application object](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW75))。应用程序对象负责管理应用程序的生命周期，系统还创建了一个<font color=#888>AppDelegate</font>类的实例，并将其分配给应用程序对象。最后，系统启动你的应用程序。
 
-每当创建一个新项目时，都会自动创建<font color=#888>AppDelegate</font>类。
+每当创建一个新项目时，都会自动创建<font color=#888>AppDelegate</font>类。除非你正在做一些非常不同寻常的事情，否则你应该使用Xcode提供的这个类来初始化应用程序并响应应用级别(app-level)的事件。<font color=#888>AppDelegate</font>类遵循<font color=#888>UIApplicationDelegate</font>协议。这个协议定义了一些用来设置应用程序的方法，来响应应用程序的状态变化，以及处理其他应用程序级别的事件。
+
+<font color=#888>AppDelegate</font>类包含一个属性: <font color=#888>window</font>。
+
+><font color=#A83690>var</font> <font color=#416E73>window</font><font color=#000>:</font> <font color=#5A2B95>UIWindow</font><font color=#000>?</font>
+
+该属性存储着应用程序窗口的引用。此窗口代表了应用程序视图层级的根视图。这就是你所有的应用程序内容被绘制的地方。注意，窗口属性是可选([optional](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW11))的，这意味着在某个点可能没有值(为[nil](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW5))。
+
+<font color=#888>AppDelegate</font>类还包含以下代理方法的实现:
+
+>1. <font color=#A83690>func</font> <font color=#416E73>application</font>
+<font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000>,</font> <font color=#416E73>didFinishLaunchingWithOptions</font> <font color=#416E73>launchOptions</font><font color=#000>:</font> <font color=#000>[</font><font color=#5A2B95>UIApplicationLaunchOptionsKey</font><font color=#000>:</font> <font color=#A83690>Any</font><font color=#000>]</font><font color=#000>?</font><font color=#000>)</font> <font color=#000>-></font> <font color=#A83690>Bool</font>
+
+>2. <font color=#A83690>func</font> <font color=#416E73>applicationWillResignActive</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
+
+>3. <font color=#A83690>func</font> <font color=#416E73>applicationDidEnterBackground</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
+
+>4. <font color=#A83690>func</font> <font color=#416E73>applicationWillEnterForeground</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
+
+>5. <font color=#A83690>func</font> <font color=#416E73>applicationDidBecomeActive</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
+
+>6. <font color=#A83690>func</font> <font color=#416E73>applicationWillTerminate</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
