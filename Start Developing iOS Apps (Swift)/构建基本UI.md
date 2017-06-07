@@ -152,9 +152,15 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 单视图模板还有另一个源文件：<font color=#888>ViewController.swift</font>。在项目导航器中选择<font color=#888>ViewController.swift</font>进行查看。
 <img src=Images/BBUI_viewcontroller_file_2x.png width=680px>
 
-这个文件定义了一个<font color=#888>UIViewController</font>的自定义[子类](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW14)<font color=#888>ViewController</font>。现在，这个类仅仅继承了<font color=#888>UIViewController</font>定义的所有行为。为了覆盖或扩展该行为，你将覆盖在<font color=#888>UIViewController</font>中定义的方法。
+这个文件定义了一个<font color=#888>UIViewController</font>的自定义[子类](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW14): <font color=#888>ViewController</font>。现在，这个类仅仅继承了<font color=#888>UIViewController</font>定义的所有行为。为了覆盖或扩展该行为，你将覆盖在<font color=#888>UIViewController</font>中定义的方法。
 
 正如你在<font color=#888>ViewController.swift</font>中看到的。模板重写了<font color=#888>viewDidLoad()</font>和<font color=#888>didReceiveMemoryWarning()</font>方法；然而，这2个方法没有做任何事情，除了调用<font color=#888>UIViewController</font>的方法。你可以添加自己的代码来定制视图控制器对这些事件的响应。
 
 
 尽管模板附带了<font color=#888>didReceiveMemoryWarning()</font>方法，但在这节课中无需实现它，所以可以将其删除。
+
+现在，<font color=#888>ViewController.swift</font>文件的代码应该是这样：
+
+<img src=Images/BBUI_code1.png>
+
+你将在本课程后面的源代码文件中开始编写代码。
