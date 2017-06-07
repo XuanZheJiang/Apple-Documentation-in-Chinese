@@ -138,3 +138,23 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 >5. <font color=#A83690>func</font> <font color=#416E73>applicationDidBecomeActive</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
 
 >6. <font color=#A83690>func</font> <font color=#416E73>applicationWillTerminate</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
+
+这些方法让应用程序对象与应用程序代理进行通信。例如，在应用状态变化期间，应用启动，进入后台和应用终止——应用程序调用相应的代理方法，给应用程序一个响应的机会。你无需关心这些方法会不会在正确的时候被调用，应用程序对象会为你处理这些。
+
+每个代理方法都有默认行为。如果你使用空模板或从<font color=#888>AppDelegate</font>类中删除了这些方法，那么每当调用该方法时，你会得到其默认的行为。
+
+该模板为每个代理方法提供了注释。这些注释描述了你的应用程序如何使用这些方法。你可以使用这些方法和注释来设计出应用程序的蓝图。
+
+在本节课中，你将不会使用任何自定义的协议代理代码，因此你不必对<font color=#888>AppDelegate.swift</font>文件进行任何更改。
+
+### 视图控制器源文件
+
+单视图模板还有另一个源文件：<font color=#888>ViewController.swift</font>。在项目导航器中选择<font color=#888>ViewController.swift</font>进行查看。
+<img src=Images/BBUI_viewcontroller_file_2x.png width=680px>
+
+这个文件定义了一个<font color=#888>UIViewController</font>的自定义[子类](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW14)<font color=#888>ViewController</font>。现在，这个类仅仅继承了<font color=#888>UIViewController</font>定义的所有行为。为了覆盖或扩展该行为，你将覆盖在<font color=#888>UIViewController</font>中定义的方法。
+
+正如你在<font color=#888>ViewController.swift</font>中看到的。模板重写了<font color=#888>viewDidLoad()</font>和<font color=#888>didReceiveMemoryWarning()</font>方法；然而，这2个方法没有做任何事情，除了调用<font color=#888>UIViewController</font>的方法。你可以添加自己的代码来定制视图控制器对这些事件的响应。
+
+
+尽管模板附带了<font color=#888>didReceiveMemoryWarning()</font>方法，但在这节课中无需实现它，所以可以将其删除。
