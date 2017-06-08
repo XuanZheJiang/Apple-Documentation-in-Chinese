@@ -126,18 +126,7 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 
 <font color=#888>AppDelegate</font>类还包含以下代理方法的实现:
 
->1. <font color=#A83690>func</font> <font color=#416E73>application</font>
-<font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000>,</font> <font color=#416E73>didFinishLaunchingWithOptions</font> <font color=#416E73>launchOptions</font><font color=#000>:</font> <font color=#000>[</font><font color=#5A2B95>UIApplicationLaunchOptionsKey</font><font color=#000>:</font> <font color=#A83690>Any</font><font color=#000>]</font><font color=#000>?</font><font color=#000>)</font> <font color=#000>-></font> <font color=#A83690>Bool</font>
-
->2. <font color=#A83690>func</font> <font color=#416E73>applicationWillResignActive</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
-
->3. <font color=#A83690>func</font> <font color=#416E73>applicationDidEnterBackground</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
-
->4. <font color=#A83690>func</font> <font color=#416E73>applicationWillEnterForeground</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
-
->5. <font color=#A83690>func</font> <font color=#416E73>applicationDidBecomeActive</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
-
->6. <font color=#A83690>func</font> <font color=#416E73>applicationWillTerminate</font><font color=#000>(</font><font color=#A83690>_</font> <font color=#416E73>application</font><font color=#000>:</font> <font color=#5A2B95>UIApplication</font><font color=#000><font color=#000>)</font>
+<img src=Images/BBUI_code2.png>
 
 这些方法让应用程序对象与应用程序代理进行通信。例如，在应用状态变化期间，应用启动，进入后台和应用终止——应用程序调用相应的代理方法，给应用程序一个响应的机会。你无需关心这些方法会不会在正确的时候被调用，应用程序对象会为你处理这些。
 
@@ -164,3 +153,6 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 <img src=Images/BBUI_code1.png>
 
 你将在本课程后面的源代码文件中开始编写代码。
+
+## <font color=#888>打开你的情节串联图板 (Open Your Storyboard)</font>
+
