@@ -156,3 +156,4 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 
 ## <font color=#888>打开你的情节串联图板 (Open Your Storyboard)</font>
 
+你现在可以在Storyboard上开始你的工作。
