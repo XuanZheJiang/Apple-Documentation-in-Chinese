@@ -156,4 +156,10 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 
 ## <font color=#888>打开你的情节串联图板 (Open Your Storyboard)</font>
 
-你现在可以在Storyboard上开始你的工作。
+你现在可以在Storyboard上开始工作了。Storyboard是app用户界面的可视化表示，显示了屏幕的内容和它们之间的过渡转场。使用Storyboard来布置app流程。你可以在构建它时准确地了解自己正在构建的内容，或得及时反馈，了解哪些内容正在运行，哪些内容不可用，并对你的用户界面进行及时可见的更改。
+
+#### 打开你的Storyboard
+
+* 在项目导航栏中选择<font color=#888>Main.storyboard</font>。
+
+
