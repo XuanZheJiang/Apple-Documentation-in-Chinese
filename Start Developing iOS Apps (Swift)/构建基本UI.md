@@ -162,4 +162,16 @@ Scheme弹出菜单允许你选择要运行app的模拟器或真机设备。确�
 
 * 在项目导航栏中选择<font color=#888>Main.storyboard</font>。
 
+Xcode在[界面构建器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW47)(Interface Builder)中打开Storyboard，它的可视化界面编辑器在编辑器区域。Storyboard的背景是[画布](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW6)(canvas)。你可以使用画布来添加和排列用户界面元素。
 
+你的Storyboard应该和这个相似：
+
+<img src=Images/BBUI_storyboard_empty_2x.png width=680px>
+
+
+现在，Storyboard包含一个[场景](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW62)(scene)，它展现了app屏幕的内容。指向画布左侧的箭头是Storyboard的[起始点](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW66)(storyboard entry point)，这意味着app启动时，这个场景首先被加载。现在，你在画布上看到的场景包含了一个被视图控制器管理的视图。你将很快了解视图及视图控制器的作用。
+当你在iPhone7模拟器上运行app时，这个场景中的视图就是你在设备屏幕上看到的。然而，画布中的场景大小可能和模拟器屏幕的尺寸不同，你可以在场景的底部选择屏幕尺寸和方向。在本例中，都采用iPhone7的尺寸和竖直方向，所以画布和模拟器是一样的。
+
+尽管画布显示了一个特定的设备和方向，但是创建一个可以自适应的界面是很重要的，使它在任何设备和任何方向上看起来都是很好的。当你在开发界面时，你可以修改画布的视图，以便看到你的界面是如何适应不同尺寸的屏幕。
+
+## <font color=#888>构建基本UI (Build the Basic UI)</font>
