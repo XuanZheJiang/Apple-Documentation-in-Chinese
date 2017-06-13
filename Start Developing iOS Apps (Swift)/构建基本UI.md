@@ -180,3 +180,10 @@ Xcode在[界面构建器](https://developer.apple.com/library/content/referencel
 
 Xcode提供了一个可以添加到Storyboard文件的对象库。其中一些是出现在用户界面中的元素，如按钮和文本字段。其他的，比如视图控制器和手势识别器，定义了应用程序的行为，但不会在屏幕上出现。
 
+在用户界面中出现的元素称为视图。视图显示内容给用户。它们是构建用户界面的模块，以一种清晰、优雅和有用的方式呈现内容给用户。视图有许多有用的内置行为，包括在屏幕上显示自己，并对用户输入作出反应。
+
+iOS中的所有视图对象都是UIView或它的一个子类，许多UIView的子类在外观和行为方面都是高度定制的。首先添加一个text field(<font color=#888>UITextField</font>),一个UIView的子类，到你的场景。TextField允许用户输入一行文本，你将使用该文本作为用餐的名称。
+
+#### 在场景中添加一个TextField
+
+1. 选择Editor > Canvas
