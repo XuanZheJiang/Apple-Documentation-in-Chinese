@@ -184,6 +184,58 @@ Xcode提供了一个可以添加到Storyboard文件的对象库。其中一些�
 
 iOS中的所有视图对象都是UIView或它的一个子类，许多UIView的子类在外观和行为方面都是高度定制的。首先添加一个text field(<font color=#888>UITextField</font>),一个UIView的子类，到你的场景。TextField允许用户输入一行文本，你将使用该文本作为用餐的名称。
 
-#### 在场景中添加一个TextField
+#### 在场景中新增一个TextField
 
-1. 选择Editor > Canvas
+1. 选择Editor > Canvas 并确保**Show Bounds Rectangles**是选中状态。<br/>此设置可以使画布中的所有视图周围都绘制一个蓝色边框。许多视图和控件的背景都是透明的，以至于很难看清它们的实际大小。当系统调整其大小超出或小于预期值时会发生布局错误。开启此设置有助于你了解视图的层级结构。
+2. 打开对象库<br/>[对象库](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW54)在Xcode右侧底部的[工具区](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW72)。如果没看到，请点击对象库选择栏(Library selector bar)的第三个按钮(Object library)。(或者选择 View > Utilities > Show Object Library。)<br/><img src=Images/object_library_2x.png width=438px><br/>列表中显示了每个对象的名称、描述和可视化表示。
+3. 在对象库底部的过滤栏中输入<font color=#888>text field</font>来快速找到Text Field对象。
+4. 将Text Field对象从对象库拖到场景中。<br/><img src=Images/BBUI_textfield_drag_2x.png width=446px><br/>如有必要，通过Editor > Zoom对画布进行缩放。
+5. 拖动text field使其位于场景的上半部分，并与场景的左边距对齐。<br/>当你看到如下画面时停止拖动。<br/><img src=Images/BBUI_textfield_place_2x.png width=418px><br/>蓝色参考线帮助你放置text field。当你拖动或调整对象尺寸接近边界时，参考线才会显示，直至松手后才会消失。
+6. 如有必要，请点击text field来显示调整自身尺寸的拖拽点。<br/>你可以通过拖拽界面元素的[尺寸拖拽点](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW60)(resize handles)来调整其大小。尺寸拖拽点是围绕在元素边界上的白色小方块。你可以通过点击元素来显示尺寸拖拽点。在本课中，text field应该已被选中，应为你已经停止拖动了。如果你的text field如下图所示，则可以调整其尺寸了。否则，在画布中选中它则可以显示拖拽点。<br/><img src=Images/BBUI_textfield_resizehandles_2x.png width=415px>
+7. 调整text field的左右边距直到看到三条垂直参考线：左边距对齐，水平中心对齐和右边距对齐。<br/><img src=Images/BBUI_textfield_finalsize_2x.png width=414px><br/>虽然在场景中有了text field，但是没有提示用户要输入什么。使用text field的占位符文本(placeholder)来提示用户输入菜名。
+
+#### 配置text field的占位符文本
+
+1. 选中text field，在工具区(utility area)打开属性检查器<img src=Images/inspector_attributes_2x.png width=16px>(Attributes inspector)。<br/>当你在检查器选择栏中单击左边的第四个按钮时出现[属性检查器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW19)。它可以让你在Storyboard中编辑某个对象的属性。<br/><img src=Images/BBUI_inspector_attributes_2x.png width=419px><br/>
+2. 在属性检查器中找到Placeholder字样的输入框，并输入<font color=#888>Enter meal name</font>。
+
+>进一步探索<br/>
+><font color=#000>在app的发布版本中，用户看到的任何字符串(比如text field的占位符文本)都应进行本地化。欲了解更多信息，请参阅[Build Apps for the World](https://developer.apple.com/internationalization/)</font>
+
+**3**. 按下Return键在text field中显示新的占位符文本。<br/>你的场景应类似这样：
+
+<img src=Images/BBUI_textfield_withplaceholder_2x.png width=680px>
+
+在编辑text field的属性时，还可以编辑用户选择text field时弹出的系统键盘的属性。
+
+#### 配置text field的键盘
+
+1. 确保text field仍是选中状态。
+2. 在属性检查器中找到**Return Key**字段且选择**Done**选项(如有需要可向下滚动)。<br/>此更改将把键盘的返回键由默认(default)改为了完成(Done)，使返回键更加明显。
+3. 在属性检查器中勾选**Auto-enable Return Key**复选框(如有需要请再次向下滚动)。<br/>此更改使用户在未输入任何字符前，返回键是灰色且无法点击的，确保了不会输入一个空的名称用作用餐名。
+
+属性检查器现在应该显示如下键盘设置：<br/><img src=Images/BBUI_keyboardattributes_2x.png width=272px><br/>
+
+接下来，在场景顶部添加一个标签(UILabel)。标签不是交互式的，它只能在用户界面显示静态文本。为了帮助你了解如何在用户界面中定义元素之间的交互，你将配置此标签来显示用户在text field中输入的文本。此方法可以很好的测试text field捕获用户输入的文本且进行适当的处理。
+
+#### 在场景中新增一个标签
+
+1. 在对象库的过滤栏中输入<font color=#888>label</font>来快速找到UILabel对象。
+2. 将标签对象拖到场景中。
+3. 在场景中拖动标签对象，使其在text field的上面，并与text field的左边界对齐。<br/>如下图所示时，停止拖动：<br/><img src=Images/BBUI_label_place_2x.png width=420px><br/>
+4. 双击标签对象且输入 <font color=#888>Meal Name</font>。
+5. 按下Return键在标签对象中显示新文本。<br/>现在，在场景中增加一个按钮(UIButton)对象。按钮是可交互的，因此，用户可以点击它来触发自定义行为。之后，你将创建一个操作，将标签文本重设为默认值。
+
+#### 在场景中新增一个按钮
+
+1. 在对象库的过滤栏中输入<font color=#888>button</font>来快速找到按钮对象。
+2. 将按钮对象拖到场景中。
+3. 在场景中拖动按钮对象，使其在text field的下面，并与text field的左边界对齐。<br/>如下图所示时，停止拖动：<br/><img src=Images/BBUI_button_place_2x.png width=422px><br/>
+4. 双击按钮对象且输入 <font color=#888>Set Default Label Text</font>。
+5. 按下Return键在按钮对象中显示新文本。
+6. 如有必要，请重新调整按钮。
+
+现在，场景看起来应该是这样的：
+
+<img src=Images/BBUI_button_rename_2x.png width=417px>
+
