@@ -13,7 +13,7 @@
 * 打开项目且在文件之间切换
 * 在模拟器上运行app
 * 在storyboard中添加、移动和调整UI元素
-* 使用属性检查器编辑UI元素的属性
+* 使用属性观察器编辑UI元素的属性
 * 在树形控件视图(outline view)中查看和排列UI元素
 * 使用助手编辑器(Assistant editor)预览storyboard UI
 * 使用自动布局(Auto Layout)来布置自动适应用户设备尺寸的用户界面
@@ -196,8 +196,8 @@ iOS中的所有视图对象都是UIView或它的一个子类，许多UIView的�
 
 #### 配置text field的占位符文本
 
-1. 选中text field，在工具区(utility area)打开属性检查器<img src=Images/inspector_attributes_2x.png width=16px>(Attributes inspector)。<br/>当你在检查器选择栏中单击左边的第四个按钮时出现[属性检查器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW19)。它可以让你在Storyboard中编辑某个对象的属性。<br/><img src=Images/BBUI_inspector_attributes_2x.png width=419px><br/>
-2. 在属性检查器中找到Placeholder字样的输入框，并输入<font color=#888>Enter meal name</font>。
+1. 选中text field，在工具区(utility area)打开属性观察器<img src=Images/inspector_attributes_2x.png width=16px>(Attributes inspector)。<br/>当你在检查器选择栏中单击左边的第四个按钮时出现[属性观察器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW19)。它可以让你在Storyboard中编辑某个对象的属性。<br/><img src=Images/BBUI_inspector_attributes_2x.png width=419px><br/>
+2. 在属性观察器中找到Placeholder字样的输入框，并输入<font color=#888>Enter meal name</font>。
 
 >进一步探索<br/>
 ><font color=#000>在app的发布版本中，用户看到的任何字符串(比如text field的占位符文本)都应进行本地化。欲了解更多信息，请参阅[Build Apps for the World](https://developer.apple.com/internationalization/)</font>
@@ -211,10 +211,10 @@ iOS中的所有视图对象都是UIView或它的一个子类，许多UIView的�
 #### 配置text field的键盘
 
 1. 确保text field仍是选中状态。
-2. 在属性检查器中找到**Return Key**字段且选择**Done**选项(如有需要可向下滚动)。<br/>此更改将把键盘的返回键由默认(default)改为了完成(Done)，使返回键更加明显。
-3. 在属性检查器中勾选**Auto-enable Return Key**复选框(如有需要请再次向下滚动)。<br/>此更改使用户在未输入任何字符前，返回键是灰色且无法点击的，确保了不会输入一个空的名称用作用餐名。
+2. 在属性观察器中找到**Return Key**字段且选择**Done**选项(如有需要可向下滚动)。<br/>此更改将把键盘的返回键由默认(default)改为了完成(Done)，使返回键更加明显。
+3. 在属性观察器中勾选**Auto-enable Return Key**复选框(如有需要请再次向下滚动)。<br/>此更改使用户在未输入任何字符前，返回键是灰色且无法点击的，确保了不会输入一个空的名称用作用餐名。
 
-属性检查器现在应该显示如下键盘设置：<br/><img src=Images/BBUI_keyboardattributes_2x.png width=272px><br/>
+属性观察器现在应该显示如下键盘设置：<br/><img src=Images/BBUI_keyboardattributes_2x.png width=272px><br/>
 
 接下来，在场景顶部添加一个标签(UILabel)。标签不是交互式的，它只能在用户界面显示静态文本。为了帮助你了解如何在用户界面中定义元素之间的交互，你将配置此标签来显示用户在text field中输入的文本。此方法可以很好的测试text field捕获用户输入的文本且进行适当的处理。
 
@@ -239,3 +239,13 @@ iOS中的所有视图对象都是UIView或它的一个子类，许多UIView的�
 
 <img src=Images/BBUI_button_rename_2x.png width=417px>
 
+在场景中添加的元素都是可见的，这有助于理解这些元素。通过大纲(outline)视图来查看在场景中已添加的元素。
+
+#### 查看大纲视图
+
+1. 在Storyboard中，找到大纲视图的开关(Outline view toggle)。<br/><img src=Images/BBUI_outlineview_toggle_2x.png width=px680><br/>
+2. 如果大纲视图是折叠状态，请单击Outline view toggle来展开大纲视图。
+
+[大纲视图](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW56)在画布的左侧，它可以让你看到Storyboard中对象的层级关系。你应该能够看到刚刚添加的text field、标签和按钮在层次结构中。但为什么你刚刚添加的元素都被嵌套在View下？
+
+View不仅能够在屏幕上显示自己和对用户输入作出反应，它还可以充当其他视图的容器，View排列在称为视图层次结构的层次结构中。
