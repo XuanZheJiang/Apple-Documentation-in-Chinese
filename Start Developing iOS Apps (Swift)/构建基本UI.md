@@ -270,3 +270,18 @@ View不仅能够在屏幕上显示自己和对用户输入作出反应，它还�
 
 ## <font color=#888>采用自动布局 (Adopt Auto Layout)</font>
 
+[自动布局](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW77)是一个强大的布局引擎，它可以帮助你设计适合于对场景大小变化做出动态响应的自适应布局。你可以使用[约束](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW78)(constraints)来描述一个元素相对于另一个元素的位置，元素的尺寸，或者哪个应该先收缩。自动布局根据这些约束动态计算每个元素的大小和位置。
+
+定义约束最简单的方式是使用堆叠视图(UIStackView)。StackView提供了一个简化的界面，用于在列或行中布局视图集合。StackView使用自动布局来计算它所管理的所有视图的尺寸和位置。这样可以轻松地使用自动布局的全部功能，同时大大减少布局的复杂性。
+
+采用自动布局封装现有的界面元素，然后在场景中给StackView添加约束。
+
+#### 为用餐场景添加约束
+
+1. 通过单击标准按钮返回标准编辑器(Standard editor)。<br/><img src=Images/standard_toggle_2x.png width=371px><br/>通过Xcode工具栏中的导航按钮和工具按钮展开项目导航器和工具区。
+2. 按住Shift键的同时选择text field、标签和按钮。<br/><img src=Images/BBUI_AL_shift_select_2x.png width=680px>
+3. 在画布右下角，单击**Embed In Stack**(嵌入堆叠视图)按钮(或者选择**Editor > Embed In > Stack View**)。<br/><img src=Images/BBUI_AL_stackmenu_2x.png width=680px><br/>Xcode在堆叠视图中包裹了界面的元素，将它们堆叠在一起。Xcode分析你现有的布局，以确定使用垂直堆叠，而不是水平堆叠。<br/><img src=Images/BBUI_AL_stack_2x.png width=680px>
+4. 如有需要，打开大纲视图，选择堆叠视图。<br/><img src=Images/BBUI_AL_outlineview_2x.png width=243px>
+5. 在属性观察器中，找到**Spacing**字段，输入**8**，按下**Return**键。<br/>你会注意到用户界面元素垂直间距在增大，而堆叠视图随它们一起增大。<br/><img src=Images/BBUI_AL_stackspaced_2x.png width=418px>
+6. 在画布右下角，打开**Add New Constraints**菜单。<br/><img src=Images/BBUI_AL_pinmenu_2x.png width=680px>
+7. 在**Spacing to nearest neighbor**的上方，单击2个水平约束和顶部垂直约束，当你选中时，它们会变成红色。<br/><img src=Images/BBUI_AL_pinconstraints_2x.png width=284px>
