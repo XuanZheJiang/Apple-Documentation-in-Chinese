@@ -248,4 +248,25 @@ iOS中的所有视图对象都是UIView或它的一个子类，许多UIView的�
 
 [大纲视图](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW56)在画布的左侧，它可以让你看到Storyboard中对象的层级关系。你应该能够看到刚刚添加的text field、标签和按钮在层次结构中。但为什么你刚刚添加的元素都被嵌套在View下？
 
-View不仅能够在屏幕上显示自己和对用户输入作出反应，它还可以充当其他视图的容器，View排列在称为视图层次结构的层次结构中。
+View不仅能够在屏幕上显示自己和对用户输入作出反应，它还可以充当其他视图的容器，View排列在视图层级结构中。[视图层级](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW21)定义了视图相对于其他视图的布局。在层级结构中，视图中包含的视图称为[子视图](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW22)(subviews)，而包含它的视图称为[父视图](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW67)(superview)。视图可以有多个子视图，但只能有一个父视图。
+
+<img src=Images/BBUI_outlineview_2x.png width=243px>
+
+总之，每个场景都有其自身的视图层级。在每个视图层级的顶层是[容器视图](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW34)。当前场景中，容器视图名为**View**，它是View Controller中的顶层视图。text field、标签和按钮都是容器视图的子视图。你在此场景中放置的所有视图都是容器视图的子视图(尽管它们本身也会有子视图)。
+
+## <font color=#888>预览界面 (Preview Your Interface)</font>
+
+定期预览你的app，已检查一切是否符合你的预期。你可以使用[辅助编辑器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW76)(assistant editor)来预览app的界面，它会在主编辑窗口旁并排显示第二个编辑窗口。
+
+#### 预览界面
+
+1. 单击Xcode右上角附近Xcode工具栏中的辅助编辑按钮以打开辅助编辑器。<br/><img src=Images/assistant_editor_toggle_2x.png width=307px>
+2. 如果想要更大的工作空间，请单击Xcode工具栏中的导航器(Navigator)和工具(Utilities)按钮，以此来折叠项目导航区和工具区。<br/><img src=Images/navigator_utilities_toggle_on_2x.png width=372px><br/>你也可以将大纲视图折叠起来。
+3. 在辅助编辑器顶部的编辑选择栏中，将辅助编辑器从**Automatic**切换至**Preview > Main.storyboard (Preview)**<br/><img src=Images/BBUI_assistant_editorselectorbar_2x.png width=680px><br/><img src=Images/BBUI_assistant_editorselectorbarpreview_2x.png width=680px><br/>正如你在辅助编辑器所看到的，预览界面看起来几乎和画布界面是一样的。然而，它们没有什么不同的。画布界面和预览界面的屏幕尺寸(iPhone 7)和屏幕方向(纵向)都是一致的。如果你想检查界面是否是自适应的，你需要预览不同尺寸的屏幕尺寸和方向。<br/><img src=Images/BBUI_preview_same_2x.png width=680px>
+4. 要预览横向，请单击预览界面底部的预览按钮。<br/><img src=Images/BBUI_preview_rotatebutton_2x.png width=389px><br/>不幸的是，这一切似乎有点不对劲，text field、标签和按钮在左上角还保持着相同的尺寸和位置。这意味着text field的尺寸不再是填充两侧的边缘。<br/><img src=Images/BBUI_preview_rotated_2x.png width=680px>
+5. 要预览不同尺寸的屏幕，请单击辅助编辑器底部的增加按钮，然后选择iPhone SE。<br/><img src=Images/BBUI_preview_addSE_2x.png width=680px><br/>同样，text field、标签和按钮还在左上角。然而，这一次text field的长度超出了屏幕的右边界。<br/><img src=Images/BBUI_preview_small_2x.png width=334px>
+
+要创建自适应界面，你需要指定界面在不同屏幕上如何调整。例如，当界面旋转至横向时，text field应该增长。当屏幕尺寸时SE时，text field应该收缩。你可以使用自动布局(Auto Layout)来轻松指定这些规则。
+
+## <font color=#888>采用自动布局 (Adopt Auto Layout)</font>
+
