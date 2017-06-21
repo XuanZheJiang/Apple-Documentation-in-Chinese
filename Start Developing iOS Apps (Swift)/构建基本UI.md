@@ -284,4 +284,4 @@ View不仅能够在屏幕上显示自己和对用户输入作出反应，它还�
 4. 如有需要，打开大纲视图，选择堆叠视图。<br/><img src=Images/BBUI_AL_outlineview_2x.png width=243px>
 5. 在属性观察器中，找到**Spacing**字段，输入**8**，按下**Return**键。<br/>你会注意到用户界面元素垂直间距在增大，而堆叠视图随它们一起增大。<br/><img src=Images/BBUI_AL_stackspaced_2x.png width=418px>
 6. 在画布右下角，打开**Add New Constraints**菜单。<br/><img src=Images/BBUI_AL_pinmenu_2x.png width=680px>
-7. 在**Spacing to nearest neighbor**的上方，单击2个水平约束和顶部垂直约束，当你选中时，它们会变成红色。<br/><img src=Images/BBUI_AL_pinconstraints_2x.png width=284px><br/>这些约束表示了距离周围最近元素左边、右边和顶部的间距。
+7. 在**Spacing to nearest neighbor**的上方，单击2个水平约束和顶部垂直约束，当你选中时，它们会变成红色。<br/><img src=Images/BBUI_AL_pinconstraints_2x.png width=284px><br/>这些约束表示了距离周围最近元素左边、右边和顶部的间距。最近元素可以是父视图、其他元素或页面边缘。
