@@ -284,4 +284,26 @@ View不仅能够在屏幕上显示自己和对用户输入作出反应，它还�
 4. 如有需要，打开大纲视图，选择堆叠视图。<br/><img src=Images/BBUI_AL_outlineview_2x.png width=243px>
 5. 在属性观察器中，找到**Spacing**字段，输入**8**，按下**Return**键。<br/>你会注意到用户界面元素垂直间距在增大，而堆叠视图随它们一起增大。<br/><img src=Images/BBUI_AL_stackspaced_2x.png width=418px>
 6. 在画布右下角，打开**Add New Constraints**菜单。<br/><img src=Images/BBUI_AL_pinmenu_2x.png width=680px>
-7. 在**Spacing to nearest neighbor**的上方，单击2个水平约束和顶部垂直约束，当你选中时，它们会变成红色。<br/><img src=Images/BBUI_AL_pinconstraints_2x.png width=284px><br/>这些约束表示了距离周围最近元素左边、右边和顶部的间距。最近元素可以是父视图、其他元素或页面边缘。
+7. 在**Spacing to nearest neighbor**的上方，单击2个水平约束和顶部垂直约束，当你选中时，它们会变成红色。<br/><img src=Images/BBUI_AL_pinconstraints_2x.png width=284px><br/>这些约束表示了距离周围最近元素左边、右边和顶部的间距。最近元素可以是父视图、其他元素或页面边缘。因为**Constrain to margins**是勾选状态，所以堆叠视图将被约束到父视图的左右边距。此选项给堆叠视图和场景边缘之间提供了空间。<br/>另一方面，堆叠视图的顶部是相对于场景顶部参考线的。如果状态栏可见，顶部参考线位于状态栏底部。如果不可见，则位于场景的顶部。因此，你需要在堆叠视图和参考线之间留一点空间。
+8. 在左、右输入框中输入**0**，在顶部输入**20**。
+9. 在**Update Frames**旁边的弹出菜单中，选择**Items of New Constraints**。这使得Interface Builder在创建约束时会自动更新受影响视图的大小。<br/>**Add New Constraints**菜单应如下图所示：<br/><img src=Images/BBUI_AL_stackconstraints_2x.png width=533px>
+10. 在**Add New Constraints**菜单中，单击**Add 3 Constraints**按钮。
+
+增加食物界面应该看起来像这样：
+
+<img src=Images/BBUI_AL_stackfinal_2x.png width=392px>
+
+此时，你会看到text field仍然没有拉伸到场景边缘，添加一个约束来修复。
+
+#### 调整堆叠视图中text field的宽度
+
+1. 在Storyboard中选中text field。
+2. 在画布右下角，再次打开**Add New Constraints**菜单。<br/><img src=Images/AL_pinmenu_2x.png width=105px>
+3. 在**Spacing to nearest neighbor**上选中右侧水平约束，选中后变为红色。
+4. 在右边的方框中输入**0**。
+5. 在**Update Frames**旁边的弹出菜单中，选择**Items of New Constraints**。<br/>**Add New Constraints**菜单应如下图所示：<br/><img src=Images/BBUI_AL_textfieldconstraint_2x.png width=680px>
+6. 在**Add New Constraints**菜单中，单击**Add 1 Constraints**按钮。
+
+食物场景看起来应该是这样的：
+
+<img src=Images/BBUI_AL_textfieldfinal_2x.png width=680px>
