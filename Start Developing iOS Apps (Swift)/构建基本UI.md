@@ -307,3 +307,19 @@ View不仅能够在屏幕上显示自己和对用户输入作出反应，它还�
 食物场景看起来应该是这样的：
 
 <img src=Images/BBUI_AL_textfieldfinal_2x.png width=680px>
+
+*检查：*在模拟器中启动app。通过选择**Hardware > Rotate Left and Hardware > Rotate Right (或 Command-Left Arrow and Command-Right Arrow)**来旋转模拟器。注意：text field的长度怎么变化取决于设备的方向和屏幕大小。还请注意，状态栏在设备横向时会消失。
+
+单击text field内部且使用屏幕键盘输入文本(如有需要，你可以通过选择**Hardware > Keyboard > Connect Hardware Keyboard**)。
+
+<img src=Images/BBUI_sim_finalUI_2x-1.png width=387px>
+
+## <font color=#888>调试自动布局 (Debugging Auto layout)</font>
+
+如果界面没有达到预期效果，可以使用自动布局的调试功能。可以使用**Update Frames**按钮和**Resolve Auto Layout Issues**菜单来使用这些功能。
+
+<img src=Images/BBUI_AL_resolvemenu_2x.png width=680px>
+
+如果你收到关于视图放置错位的问题，请使用**Update Frames**按钮。此按钮将更新所选视图及其子视图的尺寸和位置。选择场景中的视图控制器去更新所有视图。也可以按住**Option**键且单击某个视图来更新单个视图的位置尺寸。
+
+如果界面布局不符合预期，
