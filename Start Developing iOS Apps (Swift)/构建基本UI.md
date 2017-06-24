@@ -322,4 +322,17 @@ View不仅能够在屏幕上显示自己和对用户输入作出反应，它还�
 
 如果你收到关于视图放置错位的问题，请使用**Update Frames**按钮。此按钮将更新所选视图及其子视图的尺寸和位置。选择场景中的视图控制器去更新所有视图。也可以按住**Option**键且单击某个视图来更新单个视图的位置尺寸。
 
-如果界面布局不符合预期，
+如果界面布局不符合预期，单击**Resolve Auto Layout Issues**按钮以显示调试命令的菜单。这个菜单中的所有命令分布在2个表格中。一个控制当前选中的视图。另一个控制视图控制器下的所有视图。如果表格中的选项都是灰色，请选中场景中的视图控制器或其中一个视图，然后再打开菜单。
+
+选择**Reset to Suggested Constraints**选项，让Xcode使用有效的约束更新界面。选择**Clear Constraints**以删除用户界面元素上的所有约束，然后尝试按照先前的方法再次设置约束。
+
+<img src=Images/BBUI_AL_resolvemenu_small_2x.png width=257px>
+
+## <font color=#888>总结 (Wrapping Up)</font>
+
+在本课中，你已经熟悉了Xcode项目的内容，以及用于设计和运行iOS应用程序的许多工具。你还构建了一个简单的用户界面。
+
+虽然项目的场景没有做太多，但是基本的用户界面功能齐全。确保你的布局从一开始就是健壮且可扩展的，确保你有一个坚实的基础。
+
+>注意<br/>
+><font color=#000>要查看本课程完成的示例项目，请下载文件并在Xcode中查看。</font><br/><img src=Images/WWDR_download_icon_withPadding_2x.png width=15px>[下载文件](https://developer.apple.com/sample-code/swift/downloads/01_BuildABasicUI.zip)
