@@ -17,3 +17,6 @@
 
 ## <font color=#888>将UI连接到源代码 (Connect the UI to Source Code)</font>
 
+[Storyboard](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW8)中的元素和源代码是有关联的。理解Storyboard和代码之间的关系是非常重要的。
+
+在Storyboard中，一个[场景](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW62)代表一个屏幕上的内容，通常是一个视图控制器。在视图控制器里可以实现app的各种行为。[视图控制器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW7)管理一个带有子视图层级结构的单一内容视图。视图控制器在app的数据模型和视图之间起着协调数据流的作用。它封装了这些数据且用视图去显示出来。视图控制器管理着视图的生命周期，处理设备方向的旋转，定义app的导航和相应用户的输入行为。iOS中的所有视图控制器对象都是<font color=#888>UIViewController</font>类或它的一个子类。
