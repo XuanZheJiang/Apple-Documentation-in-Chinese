@@ -26,3 +26,6 @@
 正如之前看到的，Xcode已经创建了一个这样的类，<font color=#888>ViewController.swift</font>，它已经与你现在工作的这个场景建立了关联。将来，当你添加更多场景时，你将在身份检查器中自行创建此关联。[身份检查器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW80)允许你在与该对象的身份相关的Storyboard中编辑对象的属性，例如对象所属的类。
 
 <img src=Images/CUIC_inspector_identity_2x.png width=272px>
+
+在运行时中，Storyboard会创建一个<font color=#888>ViewController</font>的实例，它是你自定义的视图控制器的子类。Storyboard中的场景出现在设备的屏幕上，且用户界面的行为是在<font color=#888>ViewController.swift</font>中定义的。
+
