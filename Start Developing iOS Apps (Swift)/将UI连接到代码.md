@@ -27,5 +27,9 @@
 
 <img src=Images/CUIC_inspector_identity_2x.png width=272px>
 
-在运行时中，Storyboard会创建一个<font color=#888>ViewController</font>的实例，它是你自定义的视图控制器的子类。Storyboard中的场景出现在设备的屏幕上，且用户界面的行为是在<font color=#888>ViewController.swift</font>中定义的。
+在运行时中，Storyboard会创建一个<font color=#888>ViewController</font>的实例，它是你自定义的视图控制器的子类。Storyboard中的场景会出现在设备的屏幕上，且用户界面的行为是在<font color=#888>ViewController.swift</font>中定义的。
+
+尽管，场景已经和<font color=#888>ViewController.swift</font>建立了连接，但这并不是唯一的连接。要在app中定义交互，你的视图控制器源代码需要与Storyboard中的视图进行通信。你可以在Storyboard中的视图和视图控制器源代码文件之间定义额外的连接(**outlets--连接插座** 和 **actions--行为**)来实现通信。
+
+### 创建UI元素的Outlets
 
