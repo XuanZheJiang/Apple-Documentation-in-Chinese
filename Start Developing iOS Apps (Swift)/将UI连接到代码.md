@@ -33,3 +33,4 @@
 
 ### 创建UI元素的Outlets
 
+在代码文件里，[Outlets](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW55)提供了一种引用Storyboard中对象元素的方式。
