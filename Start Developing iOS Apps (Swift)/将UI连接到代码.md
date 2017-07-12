@@ -33,4 +33,11 @@
 
 ### 创建UI元素的Outlets
 
-在代码文件里，[Outlets](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW55)提供了一种引用Storyboard中对象元素的方式。
+在代码文件里，[Outlets](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW55)提供了一种引用Storyboard中对象元素的方式。要创建一个outlet，请按住**Control**键将控件从Storyboard中拖拽到视图控制器文件中。此操作将在视图控制器文件里创建一个对象[属性](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW58)，它可以让你在运行时通过代码来访问和操纵。
+
+你需要为用户界面中的text field和标签创建outlet，以便能够引用它们。
+
+#### 将text field连接到ViewController.swift中
+
+1. 打开你的Storyboard，<font color=#888>Main.storyboard</font>
+2. 
