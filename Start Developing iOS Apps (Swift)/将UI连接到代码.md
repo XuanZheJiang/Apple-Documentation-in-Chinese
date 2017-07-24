@@ -41,4 +41,4 @@
 
 1. 打开你的Storyboard，<font color=#888>Main.storyboard</font>
 2. 在Xcode工具栏右上角点击**Assistant**按钮，打开[辅助编辑器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW76)。<br/><img src=Images/assistant_editor_toggle_2x-1.png width=307px>
-3. 
+3. 如果你想要获得更大的工作空间，
