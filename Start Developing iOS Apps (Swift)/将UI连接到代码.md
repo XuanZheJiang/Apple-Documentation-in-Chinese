@@ -42,4 +42,6 @@
 1. 打开你的Storyboard，<font color=#888>Main.storyboard</font>
 2. 在Xcode工具栏右上角点击**Assistant**按钮，打开[辅助编辑器](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW76)。<br/><img src=Images/assistant_editor_toggle_2x-1.png width=307px>
 3. 如果你想要获得更大的工作空间，可以通过点击Xcode工具条上的**Navigator**和**Utilities**按钮来折起[project navigator](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW57)(项目导航区)和[utility area](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW72)(工具区)区域。<br/><img src=Images/navigator_utilities_toggle_on_2x.png width=372px><br/>如有需要，你还可以折起[outline view](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW56)(大纲视图)。
-4. 
+4. 在辅助编辑器的顶部，点击**Automatic**-><font color=#888>ViewController.swift</font><br><img src=Images/CUIC_switchtoviewcontroller_2x.png width=680px><br><font color=#888>ViewController.swift</font>显示在辅助编辑器的右侧。
+5. 在 <font color=#888>ViewController.swift</font>中，找到<font color=#888>class</font>一行，如下图：<br><img src=Images/class_2x.png width=320px>
+6. 
