@@ -45,3 +45,7 @@
 4. 在辅助编辑器的顶部，点击**Automatic**-><font color=#888>ViewController.swift</font><br><img src=Images/CUIC_switchtoviewcontroller_2x.png width=680px><br><font color=#888>ViewController.swift</font>显示在辅助编辑器的右侧。
 5. 在 <font color=#888>ViewController.swift</font>中，找到<font color=#888>class</font>一行，如下图：<br><img src=Images/class_2x.png width=320px>
 6. 在<font color=#888>class</font>行下方输入如下代码：<br/><img src=Images/mark_2x.png width=154px><br/>你仅仅在源代码中填加了一条注释。[注释](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW31)在代码中只是一段文本，它不参与程序的编译，只是在个别地方提供解释说明的作用。<br/><font color=#888>//MARK:</font>是一种特殊的注释类型，它可以(阅读你代码的人)组织代码且帮助你快速定位代码的位置。稍后你会看到这一操作。此时，你所填加的这条注释表明，此处列出了属性列表。
+7. 在Storyboard里选择text field。
+8. 将text field从[场景](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW6)拖拽到右侧的代码编辑区内，停放在刚刚填加的注释下方。<br/><img src=Images/CUIC_textfield_dragoutlet_2x.png width=680px>
+9. 在出现的对话框中，将<font color=#888>nameTextField</font>输入到**Name**栏中，其于选项保持默认。<br/><img src=Images/CUIC_textfield_addoutlet_2x.png width=680px>
+10. 单击**Connect**
