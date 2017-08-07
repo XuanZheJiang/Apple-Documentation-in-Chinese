@@ -48,4 +48,4 @@
 7. 在Storyboard里选择text field。
 8. 将text field从[场景](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW6)拖拽到右侧的代码编辑区内，停放在刚刚填加的注释下方。<br/><img src=Images/CUIC_textfield_dragoutlet_2x.png width=680px>
 9. 在出现的对话框中，将<font color=#888>nameTextField</font>输入到**Name**栏中，其于选项保持默认。<br/><img src=Images/CUIC_textfield_addoutlet_2x.png width=680px>
-10. 单击**Connect**
+10. 单击**Connect**<br/>Xcode将必要的代码添加到<font color=#888>ViewController.swift</font>中以存储对text field的引用，并配置Storyboard以设置该连接。<br/><img src=Images/CUIC1.png width=366px><br/>花一点时间来了解这行代码中发生了什么。
