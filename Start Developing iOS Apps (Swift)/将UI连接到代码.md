@@ -53,4 +53,5 @@
 #### 将label连接到ViewController.swift
 
 1. 在Storyboard里，选中label。
-2. 
+2. 将场景中的标签(label)拖拽到右侧的代码显示区，停留在刚刚填加的<font color=#888>nameTextField</font>属性的下方。<br/><img src=Images/CUIC_label_dragoutlet_2x.png width=680px>
+3. 
