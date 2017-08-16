@@ -54,4 +54,5 @@
 
 1. 在Storyboard里，选中label。
 2. 将场景中的标签(label)拖拽到右侧的代码显示区，停留在刚刚填加的<font color=#888>nameTextField</font>属性的下方。<br/><img src=Images/CUIC_label_dragoutlet_2x.png width=680px>
-3. 
+3. 在出现的对话框中，将<font color=#888>mealNameLabel</font>输入到**Name**栏中，其于选项保持默认。<br/><img src=Images/CUIC_label_addoutlet_2x.png width=680px>
+4. 单击**Connect**<br/>同样的，Xcode为<font color=#888>ViewController.swift</font>增加了必要的代码，并且存储了对label的引用，使代码和Storyboard建立了关联。这个outlet除了名字和类型以外和text field比较相似(这是UILabel类型的)。
