@@ -55,4 +55,6 @@
 1. 在Storyboard里，选中label。
 2. 将场景中的标签(label)拖拽到右侧的代码显示区，停留在刚刚填加的<font color=#888>nameTextField</font>属性的下方。<br/><img src=Images/CUIC_label_dragoutlet_2x.png width=680px>
 3. 在出现的对话框中，将<font color=#888>mealNameLabel</font>输入到**Name**栏中，其于选项保持默认。<br/><img src=Images/CUIC_label_addoutlet_2x.png width=680px>
-4. 单击**Connect**<br/>同样的，Xcode为<font color=#888>ViewController.swift</font>增加了必要的代码，并且存储了对label的引用，使代码和Storyboard建立了关联。这个outlet除了名字和类型以外不同以外，其余和text field比较相似(这是UILabel类型的)。<br/><img src=Images/CUIC2.png width=340px><br/>如果你计划使用代码访问界面中的值或修改值，那么你只需添加一个outlet即可。在本课中，你需要给text field添加delegate属性，给label添加text属性。你将不会修改按钮，所以现在还不用为其创建outlet。<br/>Outlet允许你在代码中引用你的界面元素，但用户与元素交互时，你仍需一种方式来响应。这就是Action的作用。
+4. 单击**Connect**<br/>同样的，Xcode为<font color=#888>ViewController.swift</font>增加了必要的代码，并且存储了对label的引用，使代码和Storyboard建立了关联。这个outlet除了名字和类型以外不同以外，其余和text field比较相似(这是UILabel类型的)。<br/><img src=Images/CUIC2.png width=340px><br/>如果你计划使用代码访问界面中的值或修改值，那么你只需添加一个outlet即可。在本课中，你需要给text field添加delegate属性，给label添加text属性。你将不会修改按钮，所以现在还不用为其创建outlet。<br/>Outlet允许你在代码中引用你的界面元素，但用户与元素交互时，你仍需一种方式来响应。这就是Action的作用。
+
+### 定义一个要执行的操作iOS应用程序是基于[event-driven programming](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW38)(事件-驱动)的编程。也就是说
