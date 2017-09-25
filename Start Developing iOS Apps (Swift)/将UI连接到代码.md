@@ -58,3 +58,13 @@
 4. 单击**Connect**<br/>同样的，Xcode为<font color=#888>ViewController.swift</font>增加了必要的代码，并且存储了对label的引用，使代码和Storyboard建立了关联。这个outlet除了名字和类型以外不同以外，其余和text field比较相似(这是UILabel类型的)。<br/><img src=Images/CUIC2.png width=340px><br/>如果你计划使用代码访问界面中的值或修改值，那么你只需添加一个outlet即可。在本课中，你需要给text field添加delegate属性，给label添加text属性。你将不会修改按钮，所以现在还不用为其创建outlet。<br/>Outlet允许你在代码中引用你的界面元素，但用户与元素交互时，你仍需一种方式来响应。这就是Action的作用。
 
 ### 定义一个要执行的操作iOS应用程序是基于[event-driven programming](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW38)(事件-驱动)的编程。也就是说，应用程序的流程是由事件：系统事件和用户操作决定的。用户在界面中执行操作，相当于在应用程序中触发事件。这此事件导致app执行其逻辑和修改其数据。app对用户的操作都反应在界面上。由于某些执行是用户控制的，而不是开发者，所以你需要确定用户可以执行哪些操作，操作后会发生什么。<br/>一个[action(动作)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW23)（或动作方法）在app中是一段可以链接到事件的代码。当事件发生时，系统将会执行这段代码。你可以定义一个action操纵一些数据来更新用户界面。你可以使用action来响应用户和系统事件。<br/>创建action的方式和outlet相似：在Storyboard中拖拽某一控件到视图控制器中。此操作会在视图控制器文件里创建一个方法，该方法在用户与该控件交互时触发。<br/>通过创建一个简单的Action，使用户每次点击**Set Default Text**按钮时，都可以使标签文本恢复至<font color=#888>Default Text</font>。（将text field中的文本设置为标签文本的代码有点复杂，所以你会写[Process User Input](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ConnectTheUIToCode.html#//apple_ref/doc/uid/TP40015214-CH22-SW6)（处理用户输入）的部分。）
+
+#### 在ViewController.swift中创建setDefaultLabelText操作
+
+1. 在<font color=#888>ViewController.swift</font>中最后一个大括号上方( **}** )，添加以下内容：<img src="Images/mark_action.png" width=184px><br/>这条注释表明这里列出了Action的代码部分。
+2. 在Storyboard中，选中**Set Default Label Text**按钮。
+3. 将场景中的**Set Default Label Text**按钮拖拽到右侧的代码显示区，停留在刚刚填加注释的下方。<img src="Images/CUIC_button_dragaction_2x.png"width=680px>
+4. 在弹出的对话框中，**Connection**一栏选择**Action**。
+5. **Name**一栏输入<font color=#888>setDefaultLabelText</font>。
+6. **Type**一栏选择<font color=#888>UIButton</font>。<br/>你或许已经注意到，Type字段的默认值是<font color=#888>AnyObject</font>。在Swift中，<font color=#888>AnyObject</font>是用于描述可以属于任何类的对象的类型。将Action方法的类型指定为UIButton意味着只有按钮对象可以连接到此Action。虽然这对于你现在正在创建的动作来说并不重要，但以后请记住。<br/>保留其余选项，对话框应如下所示：<img src="Images/CUIC_button_addaction_2x.png" width=680px>
+7. 单击**Connect**。<br/>Xcode会在<font color=#888>ViewController.swift</font>中添加必要代码来创建Action方法。<img src="Images/CUIC_7.png" width=488px>
