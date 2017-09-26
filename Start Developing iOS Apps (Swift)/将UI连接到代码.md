@@ -67,4 +67,9 @@
 4. 在弹出的对话框中，**Connection**一栏选择**Action**。
 5. **Name**一栏输入<font color=#888>setDefaultLabelText</font>。
 6. **Type**一栏选择<font color=#888>UIButton</font>。<br/>你或许已经注意到，Type字段的默认值是<font color=#888>AnyObject</font>。在Swift中，<font color=#888>AnyObject</font>是用于描述可以属于任何类的对象的类型。将Action方法的类型指定为UIButton意味着只有按钮对象可以连接到此Action。虽然这对于你现在正在创建的动作来说并不重要，但以后请记住。<br/>保留其余选项，对话框应如下所示：<img src="Images/CUIC_button_addaction_2x.png" width=680px>
-7. 单击**Connect**。<br/>Xcode会在<font color=#888>ViewController.swift</font>中添加必要代码来创建Action方法。<img src="Images/CUIC_7.png" width=488px>
+7. 单击**Connect**。<br/>Xcode会在<font color=#888>ViewController.swift</font>中添加必要代码来创建Action方法。<img src="Images/CUIC_7.png" width=488px><br/><font color=#888>sender</font>参数是触发Action的对象的引用，在本例中是button按钮对象。<font color=#888>IBAction</font>属性表示该方法是你可以在用户界面中从Storyboard连接到的一个Action。声明的其余部分是一个名为<font color=#888>setDefaultLabelText(_:)</font>的方法。<br/>此时，方法声明是空的，重置标签值的代码非常简单。
+
+#### 在ViewController中实现标签重制的代码
+
+1. 在<font color=#888>ViewController.swift</font>中找到你刚才添加的<font color=#888>setDefaultLabelText</font>方法。
+2. 在方法的两个大括号( **{}** )之间添加如下代码：<img src="Images/CUIC_8.png" width=340px><br/>正如你猜到的，这行代码设置了标签的默认文本。<br/>注意：你无需指定默认文本的类型，因为swift的[type inference(类型推断)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW70)可以推断出你正在分配的是<font color=#888>String</font>类型，且可以正确推断。
