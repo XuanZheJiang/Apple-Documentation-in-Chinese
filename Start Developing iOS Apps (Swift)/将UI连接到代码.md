@@ -74,4 +74,7 @@
 1. 在<font color=#888>ViewController.swift</font>中找到你刚才添加的<font color=#888>setDefaultLabelText</font>方法。
 2. 在方法的两个大括号( **{}** )之间添加如下代码：<img src="Images/CUIC_8.png" width=340px><br/>正如你猜到的，这行代码设置了标签的默认文本。<br/>注意：你无需指定默认文本的类型，因为swift的[type inference(类型推断)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW70)可以推断出你正在分配的是<font color=#888>String</font>类型，且可以正确推断。<br/>iOS为你处理所有重置代码，而你只需编写这行代码。现在，<font color=#888>setDefaultLabelTest(_:)</font>方法应如下图所示：<img src=Images/CUIC10.png width=480px>
 
-*检查点：*通过运行模拟器来测试你的更改。当你单击setDefaultLabelText按钮时，<font color=#888>setDefaultLabelTest(_:)</font>方法被调用
+*检查事项：*通过运行模拟器来测试你的更改。当你单击setDefaultLabelText按钮时，<font color=#888>setDefaultLabelTest(_:)</font>方法被调用，且<font color=#888>mealNameLabel</font>对象的<font color=#888>text</font>值从<font color=#888>MealName(你在storyboard中设置的值)</font>更改为默认文本值(通过方法设置的值)。在用户界面中，你应该看到了值的变化。
+
+<img src=Images/CUIC_sim_defaulttext_2x.png width=387px>
+
