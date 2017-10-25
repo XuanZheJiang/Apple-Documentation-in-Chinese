@@ -78,3 +78,4 @@
 
 <img src=Images/CUIC_sim_defaulttext_2x.png width=387px>
 
+虽然将餐名改为**Default Text**并不是特别有用，但它确实说明了一个重要问题。你刚刚实现的行为就是iOS应用设计中的[target-action(目标-动作)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW68)模式的一个例子。target-action是一种设计模式，其中一个对象在特定事件发生时向另一个对象发送消息。
