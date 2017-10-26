@@ -79,3 +79,18 @@
 <img src=Images/CUIC_sim_defaulttext_2x.png width=387px>
 
 虽然将餐名改为**Default Text**并不是特别有用，但它确实说明了一个重要问题。你刚刚实现的行为就是iOS应用设计中的[target-action(目标-动作)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW68)模式的一个例子。target-action是一种设计模式，其中一个对象在特定事件发生时向另一个对象发送消息。
+
+在本例中：
+
+* event(事件)是用户点击SetDefaultLabelText按钮
+* action(动作)是<font color=#888>setDefaultLabelTest(_:)</font>
+* target(目标)是<font color=#888>ViewController</font>（Action方法定义的地方）
+* sender(发送方)是SetDefaultLabelText按钮
+
+系统通过调用target上的action方法来发送消息，在这个过程中也将sender传递了出去。sender通常是一个控制控件，诸如按钮、滑块和开关，可以触发事件以响应用户交互，例如点击、拖放或值的更改。这种设计模式在iOS开发中很常见，在课程中你还会看到很多。
+
+## <font color=#888>处理用户输入(Process User Input)</font>
+
+此时，用户可以将餐名重置为默认值，但你很想让用户通过text field来输入餐名。为了使用简便，只要用户在text field中输入文本且点击Return按钮，就会更新餐名mealNameLabel对象的值。
+
+当你从text field接收用户输入时，你需要text field delegate(代理)的帮助。[delegate](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW36)是一种设计模式，用于一个对象“代表”另外一个对象和程序中其他的对象进行交互。
