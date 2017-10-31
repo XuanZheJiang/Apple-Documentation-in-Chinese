@@ -93,4 +93,4 @@
 
 此时，用户可以将餐名重置为默认值，但你很想让用户通过text field来输入餐名。为了使用简便，只要用户在text field中输入文本且点击Return按钮，就会更新餐名mealNameLabel对象的值。
 
-当你从text field接收用户输入时，你需要text field delegate(代理)的帮助。[delegate](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW36)是一种设计模式，用于一个对象“代表”另外一个对象和程序中其他的对象进行交互。
+当你从text field接收用户输入时，你需要text field delegate(代理)的帮助。[delegate](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW36)(**以下称代理对象**)是一种设计模式，用于一个对象“代表”另外一个对象和程序中其他的对象进行交互。在本例中，代理对象
